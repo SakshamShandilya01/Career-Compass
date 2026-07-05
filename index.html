@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indian Engineering Career Compass</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Indian Engineering Career Compass</h1>
+    <p>Honest placement probability for CSE students (still a work in progress!)</p>
+
+    <!-- FORM: collects student profile -->
+    <div class="form-section">
+
+        <!-- College Tier -->
+        <div class="field">
+            <label>College Tier</label>
+            <div class="radio-group">
+                <label><input type="radio" name="tier" value="1"> Tier 1 (IIT/NIT)</label>
+                <label><input type="radio" name="tier" value="2"> Tier 2 (State Govt)</label>
+                <label><input type="radio" name="tier" value="3" checked> Tier 3 (Private)</label>
+            </div>
+        </div>
+
+        <!-- CGPA -->
+        <div class="field">
+            <label>CGPA</label>
+            <input type="number" id="cgpa" min="0" max="10" step="0.1" placeholder="7.5">
+        </div>
+
+        <!-- LeetCode -->
+        <div class="field">
+            <label>LeetCode Problems Solved</label>
+            <input type="number" id="leetcode" min="0" placeholder="45">
+        </div>
+
+        <!-- Projects -->
+        <div class="field">
+            <label>Number of Projects</label>
+            <input type="number" id="projects" min="0" placeholder="1">
+        </div>
+
+        <!-- Skills -->
+        <div class="field">
+            <label>Your Skills</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="Python"> Python</label>
+                <label><input type="checkbox" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" value="React"> React</label>
+                <label><input type="checkbox" value="SQL"> SQL</label>
+                <label><input type="checkbox" value="DSA"> DSA</label>
+                <label><input type="checkbox" value="C++"> C++</label>
+                <label><input type="checkbox" value="Statistics"> Statistics</label>
+                <!-- TODO: add more skills once I know which ones actually matter (Java? Go? idk yet) -->
+            </div>
+        </div>
+
+        <!-- Target Role -->
+        <div class="field">
+            <label>Target Role</label>
+            <div class="radio-group">
+                <label><input type="radio" name="target" value="swe"> Software Engineer</label>
+                <label><input type="radio" name="target" value="fullstack" checked> Full Stack</label>
+                <label><input type="radio" name="target" value="hft"> HFT / Quant</label>
+                <!-- TODO: add Data Science / ML role later -->
+            </div>
+        </div>
+
+        <button onclick="calculate()">CALCULATE MY CHANCES</button>
+    </div>
+
+    <!-- RESULTS: hidden until calculate is clicked -->
+    <div class="results-section" id="results" style="display:none">
+        <div id="scores-display"></div>
+        <div id="gaps-display"></div>
+        <div id="plan-display"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a14;
+    color: #c0c0e0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* TODO: this isn't mobile responsive yet, need to add media queries later */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #5a5a80;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    background: #111124;
+    border: 1px solid #1e1e38;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+input[type="number"] {
+    background: #0d0d1c;
+    border: 1px solid #1e1e38;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #00f07a;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #c0c0e0;
+    font-weight: normal;
+}
+
+button {
+    background: #00f07a;
+    color: #000000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.results-section {
+    background: #111124;
+    border: 1px solid #1e1e38;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.score-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.score-label {
+    font-size: 13px;
+    color: #ffffff;
+    min-width: 160px;
+}
+
+.bar-track {
+    flex: 1;
+    background: #1e1e38;
+    border-radius: 4px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    /* TODO: add a smooth transition here once I learn CSS animations properly */
+}
+
+.score-number {
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: right;
+}
+
+.gap-item {
+    padding: 8px 0 8px 16px;
+    border-left: 2px solid #f43f5e;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #9090b0;
+    line-height: 1.6;
+}
+
+.plan-week {
+    margin-bottom: 16px;
+}
+
+.plan-week h4 {
+    font-size: 12px;
+    color: #00f07a;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.plan-item {
+    font-size: 12px;
+    color: #9090b0;
+    padding: 4px 0 4px 14px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.plan-item::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #00f07a;
+}
+
+.result-heading {
+    font-size: 11px;
+    color: #5a5a80;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1e1e38;
+}
